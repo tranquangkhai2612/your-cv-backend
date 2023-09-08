@@ -47,6 +47,102 @@ public class Profile {
     private Set<Language> languages;
     @OneToMany(mappedBy = "profile")
     private Set<Hobby> hobbies;
+    @OneToMany(mappedBy = "profile")
+    private Set<LicenseCertification> licenseCertifications;
+    @OneToMany(mappedBy = "profile")
+    private Set<Project> projects;
+    @OneToMany(mappedBy = "profile")
+    private Set<Volunteer> volunteers;
+    @OneToMany(mappedBy = "profile")
+    private Set<Course> courses;
+
+    public Set<Patent> getPatents() {
+        return patents;
+    }
+
+    public void setPatents(Set<Patent> patents) {
+        this.patents = patents;
+    }
+
+    public Set<Honor> getHonors() {
+        return honors;
+    }
+
+    public void setHonors(Set<Honor> honors) {
+        this.honors = honors;
+    }
+
+    public Set<Skill> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(Set<Skill> skills) {
+        this.skills = skills;
+    }
+
+    public Set<Education> getEducations() {
+        return educations;
+    }
+
+    public void setEducations(Set<Education> educations) {
+        this.educations = educations;
+    }
+
+    public Set<Experience> getExperiences() {
+        return experiences;
+    }
+
+    public void setExperiences(Set<Experience> experiences) {
+        this.experiences = experiences;
+    }
+
+    public Set<Language> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(Set<Language> languages) {
+        this.languages = languages;
+    }
+
+    public Set<Hobby> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(Set<Hobby> hobbies) {
+        this.hobbies = hobbies;
+    }
+
+    public Set<LicenseCertification> getLicenseCertifications() {
+        return licenseCertifications;
+    }
+
+    public void setLicenseCertifications(Set<LicenseCertification> licenseCertifications) {
+        this.licenseCertifications = licenseCertifications;
+    }
+
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
+    }
+
+    public Set<Volunteer> getVolunteers() {
+        return volunteers;
+    }
+
+    public void setVolunteers(Set<Volunteer> volunteers) {
+        this.volunteers = volunteers;
+    }
+
+    public Set<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
+    }
 
     public Set<CollectionDetail> getCollectionDetails() {
         return collectionDetails;

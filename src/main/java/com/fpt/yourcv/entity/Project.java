@@ -4,16 +4,22 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-@Entity(name = "hobbies")
-public class Hobby {
+@Entity(name = "projects")
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
     @JoinColumn(name = "profile_id")
     private Profile profile;
-    @Column(name = "hobby_name")
-    private String hobbyName;
+    @Column(name = "project_name")
+    private String projectName;
+    @Column(name = "demo_link")
+    private String demoLink;
+    @Column(name = "start_date")
+    private Date startDate;
+    @Column(name = "end_date")
+    private Date endDate;
     @Column(name = "description")
     private String description;
     @Column(name = "created_date")
@@ -37,12 +43,36 @@ public class Hobby {
         this.profile = profile;
     }
 
-    public String getHobbyName() {
-        return hobbyName;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setHobbyName(String hobbyName) {
-        this.hobbyName = hobbyName;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public String getDemoLink() {
+        return demoLink;
+    }
+
+    public void setDemoLink(String demoLink) {
+        this.demoLink = demoLink;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public String getDescription() {
